@@ -1,15 +1,18 @@
+import 'package:fetch_io/Home_Screens/HomePage.dart';
+import 'package:fetch_io/Screens/Login.dart';
+import 'package:fetch_io/Screens/ProductDetails.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
-class Sign_up extends StatefulWidget {
-  const Sign_up({Key? key}) : super(key: key);
+
+class SignUp extends StatefulWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
-  State<Sign_up> createState() => _Sign_upState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _Sign_upState extends State<Sign_up> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,13 +31,13 @@ class _Sign_upState extends State<Sign_up> {
                       //    padding:EdgeInsets.only(top: 20),
                       //   child: Image(width:MediaQuery.of(context).size.width*0.8,image: AssetImage('assets/watu.png')),
                       //   ),
-                      Text('Karibu  !',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 22),),
-                      SizedBox(height: 10,),
-                      Text(' On step away from Home ...',style:TextStyle(fontSize: 20),),
-                      Text('Its a blessing to have you !',style: TextStyle(fontSize: 20),),
-                      SizedBox(height: 40,),
+                      const Text('Karibu  !',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 22),),
+                      const SizedBox(height: 10,),
+                      const Text(' On step away from Home ...',style:TextStyle(fontSize: 20),),
+                      const Text('Its a blessing to have you !',style: TextStyle(fontSize: 20),),
+                      const SizedBox(height: 40,),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Container(
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -42,8 +45,8 @@ class _Sign_upState extends State<Sign_up> {
                               borderRadius: BorderRadius.circular(12)
 
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left:12),
+                          child: const Padding(
+                            padding: EdgeInsets.only(left:12),
                             child: TextField(
                               //text field decoration
                               maxLines: 1,decoration:InputDecoration(
@@ -54,7 +57,7 @@ class _Sign_upState extends State<Sign_up> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Container(
@@ -64,8 +67,8 @@ class _Sign_upState extends State<Sign_up> {
                               border: Border.all(color: Colors.white)
                           ),
 
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 12),
+                          child: const Padding(
+                            padding: EdgeInsets.only(left: 12),
                             child: TextField(
                               obscureText: true,
                               maxLines: 1,decoration:InputDecoration(
@@ -79,7 +82,7 @@ class _Sign_upState extends State<Sign_up> {
                         ),
 
                       ),
-                      SizedBox(height: 20,),
+                      const SizedBox(height: 20,),
 
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -90,13 +93,13 @@ class _Sign_upState extends State<Sign_up> {
                               border: Border.all(color: Colors.white)
                           ),
 
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 12),
+                          child: const Padding(
+                            padding: EdgeInsets.only(left: 12),
                             child: TextField(
                               obscureText: true,
                               maxLines: 1,decoration:InputDecoration(
                                 border: InputBorder.none,
-                                hintText: 'Password ',suffixIcon: Icon(CupertinoIcons.eye_slash,)
+                                hintText: 'Password ',suffixIcon: Icon(CupertinoIcons.eye_slash,color:Color(0xff1C1B1B))
                               //todo to add on click on the eye so one can view the password
 
                             ),
@@ -105,7 +108,7 @@ class _Sign_upState extends State<Sign_up> {
                         ),
 
                       ),
-                      SizedBox(height: 20,),
+                      const SizedBox(height: 20,),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Container(
@@ -115,13 +118,13 @@ class _Sign_upState extends State<Sign_up> {
                               border: Border.all(color: Colors.white)
                           ),
 
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 12),
+                          child: const Padding(
+                            padding: EdgeInsets.only(left: 12),
                             child: TextField(
                               obscureText: true,
                               maxLines: 1,decoration:InputDecoration(
                                 border: InputBorder.none,
-                                hintText: ' Confirm Password ',suffixIcon: Icon(CupertinoIcons.eye_slash,)
+                                hintText: ' Confirm Password ',suffixIcon: Icon(CupertinoIcons.eye_slash,color:Color(0xff1C1B1B),)
                               //todo to add on click on the eye so one can view the password
 
                             ),
@@ -131,30 +134,30 @@ class _Sign_upState extends State<Sign_up> {
 
                       ),
 
-                      SizedBox(height: 25,),
-                      Container(
+                      const SizedBox(height: 25,),
+                       SizedBox(
                         width: MediaQuery.of(context).size.width*0.9,
                         height:MediaQuery.of(context).size.width*0.13,
                         child: ElevatedButton(
-                            child: Text(
-                                "Sign Up",
-                                style: TextStyle(fontSize: 14)
-                            ),
                             style: ButtonStyle(
                               foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                               backgroundColor: MaterialStateProperty.all<Color>(Colors.redAccent),
                               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(7),
-                                    side: BorderSide(color: Colors.redAccent)
+                                    side: const BorderSide(color: Colors.redAccent)
                                 ),
                               ),
                             ),
-                            onPressed: () => null
+                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()),),
+                            child: Text(
+                                "Sign Up",
+                                style: TextStyle(fontSize: 14)
+                            )
                         ),
                       ),
-                      SizedBox(height: 25,),
-                      Text('or Continue with'),
+                      const SizedBox(height: 25,),
+                      const Text('or Continue with'),
 
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0,20, 0,20),
@@ -169,17 +172,17 @@ class _Sign_upState extends State<Sign_up> {
                                   borderRadius: BorderRadius.circular(10)
                               ),
 
-                              child: Image(image: AssetImage('assets/gg.png'),),
+                              child: const Image(image: AssetImage('assets/gg.png'),),
                             ),
-                            SizedBox(width: 10),
+                            const SizedBox(width: 10),
                             Container(
                               height: MediaQuery.of(context).size.height*0.1,
-                              child: Image(image: AssetImage('assets/fb.png'),),
                               decoration: BoxDecoration(
                                   color: Colors.grey[200],
                                   border:Border.all(color: Colors.white),
                                   borderRadius: BorderRadius.circular(10)
                               ),
+                              child: const Image(image: AssetImage('assets/fb.png'),),
                             ),
                           ],
                         ),
@@ -187,9 +190,12 @@ class _Sign_upState extends State<Sign_up> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('you are family?'),
-                          Text(' Login here',
-                            style: TextStyle(color: Colors.blue[400]),)
+                          const Text('you are family?'),
+                          GestureDetector(
+                            onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()),),
+                            child: const Text(' Login here',
+                              style: TextStyle(color: Colors.redAccent),),
+                          )
                         ],
                       )
 
