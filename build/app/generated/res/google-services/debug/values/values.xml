@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">955320775175-9pcimbudi11jnrk6elb7skip9isrbqqg.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">955320775175</string>
+    <string name="google_api_key" translatable="false">AIzaSyBDTv8bN1NZsXsA_Nmh_zIW3CIwV7HcOiY</string>
+    <string name="google_app_id" translatable="false">1:955320775175:android:9e06536497f2151d4930a2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBDTv8bN1NZsXsA_Nmh_zIW3CIwV7HcOiY</string>
+    <string name="google_storage_bucket" translatable="false">genge-b4831.appspot.com</string>
+    <string name="project_id" translatable="false">genge-b4831</string>
+</resources>

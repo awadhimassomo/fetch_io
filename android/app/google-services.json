@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "955320775175",
+    "project_id": "genge-b4831",
+    "storage_bucket": "genge-b4831.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955320775175:android:9e06536497f2151d4930a2",
+        "android_client_info": {
+          "package_name": "com.example.fetch_io"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955320775175-9pcimbudi11jnrk6elb7skip9isrbqqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDTv8bN1NZsXsA_Nmh_zIW3CIwV7HcOiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955320775175-9pcimbudi11jnrk6elb7skip9isrbqqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
